@@ -1,0 +1,31 @@
+<h3><a class="btn btn-secondary" href="/jobs"><i class="fa fa-plus"></i> Post New</a> Job</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Job Title</th>
+            <th>Role</th>
+            <th>Company Name</th>
+            <th>Locations</th>
+            <th>Post Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.jobTitle}}</td>
+            <td>{{this.jobRole}}</td>
+            <td>{{this.jobCompanyName}}</td>
+            <td>{{this.jobLocation}}</td>
+            <td>{{this.jobPostedDate}}</td>
+            <td>
+                <a href="/jobs/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/jobs/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+
+
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>

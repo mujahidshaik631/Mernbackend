@@ -1,0 +1,154 @@
+<h3>{{viewTitle}}</h3>
+<form action="/jobs" method="POST">
+<input type="hidden" name="_id" value="{{jobpost._id}}">
+    <div class="form-group">
+        <label>Job Id</label>
+        <input type="text" class="form-control" name="jobId" placeholder="Job Id" value="{{jobpost.jobId}}">
+        <div class="text-danger">
+            {{jobpost.jobIdError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Job Title</label>
+        <input type="text" class="form-control" name="jobTitle" placeholder="Job Title" value="{{jobpost.jobTitle}}">
+        <div class="text-danger">
+            {{jobpost.jobTitleError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Job Posted Date</label>
+        <input type="Date" class="form-control" name="jobPostedDate" placeholder="Job Posted Date"
+            value="{{jobpost.jobPostedDate}}">
+        <div class="text-danger">
+            {{jobpost.jobPostedDateError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Role</label>
+        <input type="text" class="form-control" name="jobRole" placeholder="Job Role" value="{{jobpost.jobRole}}">
+        <div class="text-danger">
+            {{jobpost.jobRoleError}}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Responsibility</label>
+        <input type="text" class="form-control" name="jobResponsibility" placeholder="Job Responsibility"
+            value="{{jobpost.jobResponsibility}}">
+        <div class="text-danger">
+            {{jobpost.jobResponsibilityError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Company Name</label>
+        <input type="text" class="form-control" name="jobCompanyName" placeholder="Company Name"
+            value="{{jobpost.jobCompanyName}}">
+        <div class="text-danger">
+            {{jobpost.jobCompanyNameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Job Experience</label>
+        <input type="text" class="form-control" name="jobExperience" placeholder="Job Experience in years"
+            value="{{jobpost.jobExperience}}">
+        <div class="text-danger">
+            {{jobpost.jobExperienceError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Job Salary</label>
+        <input type="text" class="form-control" name="jobSalary" placeholder="Salary" value="{{jobpost.jobSalary}}">
+        <div class="text-danger">
+            {{jobpost.jobSalaryError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Number of Positions</label>
+        <input type="text" class="form-control" name="jobPositions" placeholder="No. of Positions available"
+            value="{{jobpost.jobPositions}}">
+        <div class="text-danger">
+            {{jobpost.jobPositionsError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Location</label>
+        <input type="text" class="form-control" name="jobLocation" placeholder="Job Location"
+            value="{{jobpost.jobLocation}}">
+        <div class="text-danger">
+            {{jobpost.jobLocationError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Job Skills</label>
+        <input type="text" class="form-control" name="jobSkills" placeholder="Job Skills" value="{{jobpost.jobSkills}}">
+        <div class="text-danger">
+            {{jobpost.jobSkillsError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Degree</label>
+        <select class="form-control" name="jobDegree" value="{{jobpost.jobDegree}}">
+            <option selected disabled value="">Choose...</option>
+            <option>UG</option>
+            <option>PG</option>
+        </select>
+        <div class="text-danger">
+            {{jobpost.jobDegreeError}}
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label>Company Info</label>
+        <input type="text" class="form-control" name="jobCompanyInfo" placeholder="Company Info"
+            value="{{jobpost.jobCompanyInfo}}">
+        <div class="text-danger">
+            {{jobpost.jobCompanyInfoError}}
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label>Employement Type</label>
+        <select class="form-control" name="jobEmploymentType" value="{{jobpost.jobEmploymentType}}">
+            <option selected disabled value="">Choose...</option>
+            <option>Full time</option>
+            <option>Part Time</option>
+        </select>
+        <div class="text-danger">
+            {{jobpost.jobEmploymentTypeError}}
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label>Industry Type</label>
+        <select class="form-control" name="jobIndustryType" value="{{jobpost.jobIndustryType}}">
+            <option selected disabled value="">Choose...</option>
+            <option>Hardware</option>
+            <option>Software</option>
+        </select>
+        <div class="text-danger">
+            {{jobpost.jobIndustryTypeError}}
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label>Search Keyword</label>
+        <input type="text" class="form-control" name="jobSearch" placeholder="search Keyword"
+            value="{{jobpost.jobSearch}}">
+        <div class="text-danger">
+            {{jobpost.jobSearchError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Job Description</label>
+        <input type="text" class="form-control" name="jobDescription" placeholder="Job Description"
+            value="{{jobpost.jobDescription}}">
+        <div class="text-danger">
+            {{jobpost.jobDescriptionError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/jobs/list"><i class="fa fa-list-alt"></i>View all</a>
+    </div>
+    
+</form>
